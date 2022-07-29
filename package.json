@@ -11,7 +11,7 @@
     "debug-logs:cli": "set NODE_ENV=development&& set NODE_DEBUG=cli&& nodemon index.js",
     "debug-logs:performance": "set NODE_ENV=development&& set NODE_DEBUG=performance&& nodemon index.js",
     "dev": "set NODE_ENV=development&& nodemon index.js",
-    "prod": "set NODE_ENV=production&& node index.js",
+    "prod": "node index.js",
     "test": "set NODE_ENV=testing&& node test/index.js"
   },
   "keywords": [],
