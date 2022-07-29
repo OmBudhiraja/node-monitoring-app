@@ -1,0 +1,70 @@
+<main>
+  <h1>Create your Account</h1>
+  <h2>Signup is easy and only takes a few seconds</h2>
+  <div class="formWrapper">
+    <form action="/api/user" method="post" id="accountCreate">
+      <div class="formError"></div>
+      <div class="inputWrapper">
+        <label for="name" class="inputLabel">Name</label>
+        <input
+          type="text"
+          placeholder="John Doe"
+          name="name"
+          id="name"
+          required
+          autofocus
+          oninvalid="this.setCustomValidity('Your Name is required.')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <div class="inputWrapper">
+        <label for="phone" class="inputLabel">Phone Number</label>
+        <input
+          required
+          type="tel"
+          placeholder="1234567890"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          oninvalid="this.setCustomValidity('Enter a valid Phone Number.')"
+          oninput="this.setCustomValidity('')"
+          minlength="10"
+          maxlength="10"
+        />
+      </div>
+      <div class="inputWrapper">
+        <label for="password" class="inputLabel">Password</label>
+        <input
+          type="password"
+          placeholder="********"
+          name="password"
+          id="password"
+          required
+          minlength="6"
+          oninvalid="this.setCustomValidity('Password should be atleast 6 characters long.')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <div class="inputWrapper">
+        <input
+          required
+          type="checkbox"
+          name="tosAggrement"
+          id="tosAggrement"
+          style="width: auto; margin-right: 7px"
+          oninvalid="this.setCustomValidity('TOS Agreement is required..')"
+          oninput="this.setCustomValidity('')"
+        />
+        <label for="tosAggrement" class="inputLabel" style="display: inline"
+          >Do you agree to the terms and conditions</label
+        >
+      </div>
+      <div class="inputWrapper ctaWrapper">
+        <button type="submit" class="cta blue">Get Started</button>
+      </div>
+    </form>
+    <span class="change-form">
+      Already have an account? <a href="/session/create">Login</a>
+    </span>
+  </div>
+</main>

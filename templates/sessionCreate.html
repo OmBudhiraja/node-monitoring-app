@@ -1,0 +1,43 @@
+<main>
+  <h1>Login to your Account</h1>
+  <h2>Enter your Phone Number and Password</h2>
+  <div class="formWrapper">
+    <form action="/api/token" method="post" id="sessionCreate">
+      <div class="formError"></div>
+      <div class="inputWrapper">
+        <label for="phone" class="inputLabel">Phone Number</label>
+        <input
+          required
+          type="tel"
+          placeholder="1234567890"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          oninvalid="this.setCustomValidity('Enter a valid Phone Number.')"
+          oninput="this.setCustomValidity('')"
+          minlength="10"
+          maxlength="10"
+        />
+      </div>
+      <div class="inputWrapper">
+        <label for="password" class="inputLabel">Password</label>
+        <input
+          type="password"
+          placeholder="********"
+          name="password"
+          id="password"
+          required
+          minlength="6"
+          oninvalid="this.setCustomValidity('Password should be atleast 6 characters long.')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <div class="inputWrapper ctaWrapper">
+        <button type="submit" class="cta blue">Login</button>
+      </div>
+    </form>
+    <span class="change-form">
+      Don't have an account? <a href="/account/create">Create One</a>
+    </span>
+  </div>
+</main>

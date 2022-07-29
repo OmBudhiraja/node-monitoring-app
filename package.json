@@ -1,0 +1,20 @@
+{
+  "name": "monitoring-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "set NODE_ENV=development&& node index.js",
+    "debug-logs:workers": "set NODE_ENV=development&& set NODE_DEBUG=workers&& nodemon index.js",
+    "debug-logs:server": "set NODE_ENV=development&& set NODE_DEBUG=server&& nodemon index.js",
+    "debug-logs:cli": "set NODE_ENV=development&& set NODE_DEBUG=cli&& nodemon index.js",
+    "debug-logs:performance": "set NODE_ENV=development&& set NODE_DEBUG=performance&& nodemon index.js",
+    "dev": "set NODE_ENV=development&& nodemon index.js",
+    "prod": "set NODE_ENV=production&& node index.js",
+    "test": "set NODE_ENV=testing&& node test/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
